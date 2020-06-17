@@ -36,9 +36,6 @@ pipeline {
             }
         }
         stage('DeployToProduction') {
-            when {
-                branch 'example-solution'
-            }
             steps {
                 input 'Does the staging environment look OK?'
                 milestone(1)
